@@ -50,37 +50,52 @@ const names = [
 //         return `<li class = 
 //     })
 //   }
-//   function randomName(){
-    
-//     const name = {
-//         name: names[nameIdx]
-//     }
-//     return name
-//   };
 
-//   randomName();
+    function randomName(){
+    const nameIdx = Math.floor(Math.random() * names.length);
+    const name = {
+        name: names[nameIdx]
+    }
+    return name
+  };
+
+  const nameList = [
+    randomName(),
+    randomName()
+  ];
 
 //   function randomOccupation(){
-    
+//     const occupationIdx = Math.floor(Math.random() * occupations.length);
 //     const occupation = {
 //         occupation: occupations[occupationIdx]
 //     }
 //     return occupation
 //   };
 
+//   const occupationList = [
+//     randomOccupation(),
+//     randomOccupation()
+//   ];
+
 //   function randomPrice(){
-    
+//     const priceIdx = Math.ceil(Math.random() * 100);
+//     return priceIdx
     
 //   };
 
-//  function renderName(){
-//     const nameList = names.map((name)=> {
-//         return `<li class = "name"> ${name} </li>`
-//     });
-//     div.innerHTML = nameList.join('')
-//  };
+//   const priceList = [
+//     randomPrice(),
+//     randomPrice()
+//   ];
 
-//  renderName()
+ function renderName(){
+    const html = nameList.map((name)=> {
+        return `<li class = "name"> ${name} </li>`
+    });
+    div.innerHTML = nameList.join('')
+ };
+
+ renderName()
 
 //  function renderOccupation(){
 //     const occupationList = occupations.map((occupation) => {
@@ -89,15 +104,15 @@ const names = [
 //     div.innerHTML = occupationList.join('')
 //  };
 
-//  renderPrice();
+//  renderOccupation();
 
-//  function renderOccupation(){
-//     const priceList = occupations.map((occupation) => {
-//         return `<li class = "occupation"> ${occupation} </li>`
+//  function renderPrice(){
+//     const priceList = occupations.map((price) => {
+//         return `<li class = "price"> ${price} </li>`
 //     });
 //     div.innerHTML = occupationList.join('')
 //  };
 
-//  renderOccupation();
+ 
   
 
